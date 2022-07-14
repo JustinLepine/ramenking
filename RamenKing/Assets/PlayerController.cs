@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         if(movementInput != Vector2.zero){
             bool success = TryMove(movementInput);
 
-            if(!success && movementInput.x > 0) {
+            if(!success) {
                 success = TryMove(new Vector2(movementInput.x, 0));
             }
 
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private bool TryMove(Vector2 direction) {
         if(direction != Vector2.zero) {
-            
+
             int count = rb.Cast(
                 direction,
                 movementFilter,
@@ -65,8 +65,7 @@ public class PlayerController : MonoBehaviour
             }
         } else {
             return false;
-        }
-        
+        }        
     }
 
     void OnMove(InputValue movementValue) {
