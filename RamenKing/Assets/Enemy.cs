@@ -19,15 +19,18 @@ public class Enemy : MonoBehaviour
     }
     public float health = 1;
 
-    public void Start() {
+    public void Start() 
+    {
         animator = GetComponent<Animator>();
     }
 
-    public void Defeated() {
+    public void Defeated() 
+    {
         animator.SetTrigger("Defeated");
     }
 
-    public void RemoveEnemy() {
+    public void RemoveEnemy() 
+    {
         Destroy(gameObject);
     }
 }

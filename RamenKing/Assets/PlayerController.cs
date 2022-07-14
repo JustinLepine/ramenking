@@ -83,23 +83,28 @@ public class PlayerController : MonoBehaviour
     public void SwordAttack() {
         LockMovement();
 
-        if(spriteRenderer.flipX == true) {
+        if(spriteRenderer.flipX == true) 
+        {
             swordAttack.AttackLeft();
-        } else {
+        } else 
+        {
             swordAttack.AttackRight();
         }
     }
 
-    public void EndSwordAttack() {
+    public void EndSwordAttack() 
+    {
         UnlockMovement();
         swordAttack.StopAttack();
     }
 
-    public void LockMovement() {
+    public void LockMovement() 
+    {
         canMove = false;
     }
 
-    public void UnlockMovement() {
+    public void UnlockMovement() 
+    {
         canMove = true;
     }
 }
